@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SARA — Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">SARA</div>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+    </div>
+    <nav class="categories" aria-label="Categories">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="clothes">Clothes</button>
+      <button class="cat-btn" data-cat="jewelry">Jewelry</button>
+    </nav>
+    <button id="cartToggle" class="cart-btn" aria-label="Open cart">
+      🛒 <span id="cartCount" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>New seasonal collection</h1>
+      <p>Explore curated clothes and jewelry — easy checkout, delightful style.</p>
+    </section>
+
+    <section id="products" class="product-grid" aria-live="polite">
+      <!-- Products injected by script -->
+    </section>
+  </main>
+
+  <!-- Cart sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <header class="cart-header">
+      <h2>Your cart</h2>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </header>
+    <div id="cartItems" class="cart-items">
+      <!-- Cart items injected -->
+    </div>
+    <div class="cart-footer">
+      <div class="totals">
+        <div>Subtotal: <strong id="subtotal">$0.00</strong></div>
+        <div>Shipping: <strong id="shipping">Free</strong></div>
+      </div>
+      <button id="checkoutBtn" class="btn primary" aria-label="Proceed to checkout">Place order</button>
+      <button id="clearCartBtn" class="btn secondary" aria-label="Clear cart">Clear cart</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Checkout / Order confirmation modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <h3>Order summary</h3>
+      <div id="orderSummary"></div>
+      <div class="modal-actions">
+        <button id="confirmOrder" class="btn primary">Confirm</button>
+        <button id="cancelOrder" class="btn secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
