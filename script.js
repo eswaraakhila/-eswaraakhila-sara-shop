@@ -1,23 +1,23 @@
-// Expanded product list using Unsplash HTTPS images
+// Expanded product list using repo-hosted JPEG photos in images/
 const products = [
-  { id: 'cl_frock', title: 'Floral Frock', category: 'clothes', price: 39.99, img: 'https://source.unsplash.com/800x600/?floral-dress' },
-  { id: 'cl_skirt', title: 'Pleated Skirt', category: 'clothes', price: 29.99, img: 'https://source.unsplash.com/800x600/?skirt' },
-  { id: 'cl_shorts', title: 'Chino Shorts', category: 'clothes', price: 24.99, img: 'https://source.unsplash.com/800x600/?shorts' },
-  { id: 'cl_shirt', title: 'Oxford Shirt', category: 'clothes', price: 34.99, img: 'https://source.unsplash.com/800x600/?shirt' },
-  { id: 'cl_tshirt', title: 'Organic T-Shirt', category: 'clothes', price: 19.99, img: 'https://source.unsplash.com/800x600/?t-shirt' },
-  { id: 'cl_jeans', title: 'Straight Jeans', category: 'clothes', price: 49.99, img: 'https://source.unsplash.com/800x600/?jeans' },
-  { id: 'cl_denim_jacket', title: 'Denim Jacket', category: 'clothes', price: 79.00, img: 'https://source.unsplash.com/800x600/?denim-jacket' },
-  { id: 'cl_blazer', title: 'Casual Blazer', category: 'clothes', price: 99.00, img: 'https://source.unsplash.com/800x600/?blazer' },
-  { id: 'cl_maxi', title: 'Maxi Dress', category: 'clothes', price: 59.99, img: 'https://source.unsplash.com/800x600/?maxi-dress' },
-  { id: 'cl_mini', title: 'Mini Dress', category: 'clothes', price: 44.99, img: 'https://source.unsplash.com/800x600/?mini-dress' },
-  { id: 'cl_sweater', title: 'Cozy Sweater', category: 'clothes', price: 54.99, img: 'https://source.unsplash.com/800x600/?sweater' },
-  { id: 'cl_cardigan', title: 'Knit Cardigan', category: 'clothes', price: 39.50, img: 'https://source.unsplash.com/800x600/?cardigan' },
-  { id: 'cl_hoodie', title: 'Zip Hoodie', category: 'clothes', price: 45.00, img: 'https://source.unsplash.com/800x600/?hoodie' },
-  { id: 'cl_tracksuit', title: 'Tracksuit', category: 'clothes', price: 69.99, img: 'https://source.unsplash.com/800x600/?tracksuit' },
-  { id: 'cl_leggings', title: 'Everyday Leggings', category: 'clothes', price: 22.00, img: 'https://source.unsplash.com/800x600/?leggings' },
-  { id: 'j1', title: 'Gold Hoops', category: 'jewelry', price: 19.99, img: 'https://source.unsplash.com/800x600/?gold-earrings' },
-  { id: 'j2', title: 'Pearl Necklace', category: 'jewelry', price: 59.99, img: 'https://source.unsplash.com/800x600/?pearl-necklace' },
-  { id: 'j3', title: 'Minimalist Ring', category: 'jewelry', price: 15.00, img: 'https://source.unsplash.com/800x600/?ring' },
+  { id: 'cl_frock', title: 'Floral Frock', category: 'clothes', price: 39.99, img: 'images/cl_frock.jpg' },
+  { id: 'cl_skirt', title: 'Pleated Skirt', category: 'clothes', price: 29.99, img: 'images/cl_skirt.jpg' },
+  { id: 'cl_shorts', title: 'Chino Shorts', category: 'clothes', price: 24.99, img: 'images/cl_shorts.jpg' },
+  { id: 'cl_shirt', title: 'Oxford Shirt', category: 'clothes', price: 34.99, img: 'images/cl_shirt.jpg' },
+  { id: 'cl_tshirt', title: 'Organic T-Shirt', category: 'clothes', price: 19.99, img: 'images/cl_tshirt.jpg' },
+  { id: 'cl_jeans', title: 'Straight Jeans', category: 'clothes', price: 49.99, img: 'images/cl_jeans.jpg' },
+  { id: 'cl_denim_jacket', title: 'Denim Jacket', category: 'clothes', price: 79.00, img: 'images/cl_denim_jacket.jpg' },
+  { id: 'cl_blazer', title: 'Casual Blazer', category: 'clothes', price: 99.00, img: 'images/cl_blazer.jpg' },
+  { id: 'cl_maxi', title: 'Maxi Dress', category: 'clothes', price: 59.99, img: 'images/cl_maxi.jpg' },
+  { id: 'cl_mini', title: 'Mini Dress', category: 'clothes', price: 44.99, img: 'images/cl_mini.jpg' },
+  { id: 'cl_sweater', title: 'Cozy Sweater', category: 'clothes', price: 54.99, img: 'images/cl_sweater.jpg' },
+  { id: 'cl_cardigan', title: 'Knit Cardigan', category: 'clothes', price: 39.50, img: 'images/cl_cardigan.jpg' },
+  { id: 'cl_hoodie', title: 'Zip Hoodie', category: 'clothes', price: 45.00, img: 'images/cl_hoodie.jpg' },
+  { id: 'cl_tracksuit', title: 'Tracksuit', category: 'clothes', price: 69.99, img: 'images/cl_tracksuit.jpg' },
+  { id: 'cl_leggings', title: 'Everyday Leggings', category: 'clothes', price: 22.00, img: 'images/cl_leggings.jpg' },
+  { id: 'j1', title: 'Gold Hoops', category: 'jewelry', price: 19.99, img: 'images/j1.jpg' },
+  { id: 'j2', title: 'Pearl Necklace', category: 'jewelry', price: 59.99, img: 'images/j2.jpg' },
+  { id: 'j3', title: 'Minimalist Ring', category: 'jewelry', price: 15.00, img: 'images/j3.jpg' },
 ];
 
 // Simple cart stored as { productId: quantity }
@@ -57,7 +57,7 @@ function renderProducts(filter = 'all', q = '') {
 function productCard(p) {
   return `
     <article class="card" role="article" aria-label="${p.title}">
-      <img src="${p.img}" alt="${p.title}" loading="lazy">
+      <img src="${p.img}" alt="${p.title}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
       <h4>${p.title}</h4>
       <div class="meta">
         <div class="price">$${p.price.toFixed(2)}</div>
@@ -186,7 +186,6 @@ confirmOrder.addEventListener('click', () => {
   overlay.hidden = true;
   overlay.style.display = 'none';
 });
-
 cancelOrder.addEventListener('click', () => {
   modal.setAttribute('aria-hidden','true');
   modal.style.display = 'none';
